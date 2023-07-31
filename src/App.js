@@ -27,7 +27,7 @@ function App() {
           </div>
           <HamburgerComponent/>
       </header>
-      <div className="bg-[url(./background/A.png)] bg-[length:100%_100%] h-[700px] md:h-[600px] flex justify-center px-12">
+      <div className="bg-[url(./background/A.png)] bg-[length:100%_100%] h-[600px] flex justify-center px-12">
         <div className='my-24'>  
           <div className='mx-auto'>
             <div className='font-bold text-3xl md:text-4xl text-center'>Grow Grow</div>
