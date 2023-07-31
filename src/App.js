@@ -177,7 +177,7 @@ function NotableBenefits() {
     <>
       <div className={'fixed z-10 top-0 bottom-0 left-0 right-0 bg-black opacity-70 ' + mask} onClick={() => setSeeMore("")}>   
       </div>
-      <div className={'flex items-center justify-center text-center px-4 rounded-2xl fixed z-20 top-[25%] bottom-[25%] left-[10%] right-[10%] bg-white ' + mask}>{seeMore}</div>
+      <div className={'flex items-center justify-center text-center px-4 rounded-2xl fixed z-20 md:top-[25%] md:bottom-[25%] top-[10%] bottom-[10%] left-[10%] right-[10%] bg-white ' + mask}>{seeMore}</div>
       <Swiper slidesPerView={2} spaceBetween={10}  navigation={true} modules={[Navigation]} 
           className="mySwiper h-[400px]" breakpoints={{
             768: {
