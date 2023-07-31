@@ -151,7 +151,7 @@ function HamburgerComponent() {
     <div className="md:hidden">
       <Hamburger toggled={isOpen} toggle={setOpen} size={20}/>
       <div className={'fixed top-0 bottom-0 right-0 left-0 ' + mask} onClick={() => setOpen(false)}></div>
-                <div className={'fixed top-0 bottom-0 right-0 h-[100vh] transition-[width] bg-[#cde4ea] ' + width}>
+                <div className={'fixed top-[80px] bottom-0 right-0 h-[100vh] transition-[width] bg-[#cde4ea] ' + width}>
                 {["Trang chủ", "Giới thiệu", "Sản phẩm", "Tin tức", "Liên hệ"].map(i => 
                 <div className='m-2'>{i}</div>)}
       </div>
