@@ -18,7 +18,7 @@ import { useRef, useState } from 'react';
 function App() {
   const buyNow = useRef(null)
   return (
-    <div className="App w-[98.7vw] overflow-hidden mx-auto relative">
+    <div className="App w-full overflow-hidden mx-0 relative">
       <header className='p-4 bg-[#cde4ea] flex items-center md:justify-around justify-between'>
           <img src="logo.png"></img>
           <div className='justify-center hidden md:flex'>
