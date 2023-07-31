@@ -30,7 +30,7 @@ function App() {
       <div className="bg-[url(./background/A.png)] bg-[length:100%_100%] h-[700px] md:h-[600px] py-8 md:pl-32 md:pr-0 flex items-center px-12 md:px-0">
         <div className='flex flex-col md:flex-row items-center justify-between'>  
           <div className='md:w-2/5'>
-            <div className='font-bold text-3xl md:text-5xl text-center md:text-start'>Gr</div>
+            <div className='font-bold text-3xl md:text-5xl text-center md:text-start'>Grow Grow</div>
             <div className='text-xl mt-5 text-center md:text-start'>Siro phát triển chiều cao và sức khỏe toàn diện cho trẻ đến từ Nhật Bản</div>
               <button onClick={() => buyNow.current.scrollIntoView({behavior: 'smooth'})} 
                   className='mx-auto md:mx-0 bg-black text-white w-36 h-12 mt-10 rounded-full flex items-center justify-center border border-black hover:bg-white hover:text-black transition '>
