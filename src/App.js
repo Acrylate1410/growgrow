@@ -27,9 +27,9 @@ function App() {
           </div>
           <HamburgerComponent/>
       </header>
-      <div className="bg-[url(./background/A.png)] bg-[length:100%_100%] h-[700px] md:h-[600px] flex justify-center items-center px-12">
-        <div className='md:my-6'>  
-          <div className='md:w-2/5 mx-auto'>
+      <div className="bg-[url(./background/A.png)] bg-[length:100%_100%] h-[700px] md:h-[600px] flex justify-center px-12">
+        <div className='my-24'>  
+          <div className='mx-auto'>
             <div className='font-bold text-3xl md:text-4xl text-center'>Grow Grow</div>
             <div className='text-xl mt-5 text-center'>Siro phát triển chiều cao và sức khỏe toàn diện cho trẻ đến từ Nhật Bản</div>
               <button onClick={() => buyNow.current.scrollIntoView({behavior: 'smooth'})} 
@@ -37,7 +37,7 @@ function App() {
                     Mua ngay<span className='ml-2'><AiOutlineShoppingCart/></span>         
               </button>
           </div>
-          <img src="znfnf.png" className='md:w-1/2 mx-auto mt-12 md:mt-0'></img>
+          <div className='md:w-1/2 mx-auto mt-12 md:mt-0 bg-black'><img src="znfnf.png"></img></div>
         </div>
       </div>    
       <p className='text-center font-bold text-4xl  mb-12 z-10 mt-20'>Thành phần và hàm lượng</p>
