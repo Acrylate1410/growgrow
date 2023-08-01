@@ -297,7 +297,7 @@ function IngredientTab() {
           <div className='md:w-1/2 mx-2 md:mx-12 md:px-4 pb-8 mb-2'>
             {ingredients.map(i => i.ingredient === selected &&
               <>
-                <div className='h-[150px] aspect-square flex items-center mx-auto md:mx-0'><img  src={i.thumbnail}></img></div>
+                <div className='h-[150px] aspect-square flex items-center mx-auto md:mx-0'><img loading="lazy" src={i.thumbnail}></img></div>
                 <div className='font-bold text-center md:text-start'>{i.ingredient}</div>
                 <div className='my-4 border-l-2 border-l-black pl-4 mx-auto md:mx-0 w-min'>{i.amount + "mg"}</div>
                 <div className='text-justify'>{i.description}</div>
