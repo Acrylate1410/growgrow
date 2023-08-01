@@ -247,6 +247,7 @@ function Accordion(props) {
       </div>
   )
 }
+
 function IngredientTab() {
   const [selected, setSelected] = useState("Canxi lactate")
   const ingredients = [
