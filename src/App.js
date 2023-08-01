@@ -40,9 +40,9 @@ function App() {
           <div className='md:w-1/2 mx-auto mt-12 md:mt-0 bg-black'><img src="znfnf.png"></img></div>
         </div>
       </div>    
-      <p className='text-center font-bold text-4xl  mb-12 z-10 mt-20'>Thành phần và hàm lượng</p>
+      <p className='text-center font-bold text-3xl md:text-4xl  mb-12 z-10 mt-20'>Thành phần và hàm lượng</p>
       <IngredientTab/>
-      <p className='text-center font-bold text-4xl  my-12 z-10 mt-20'>Công dụng của Grow Grow</p>
+      <p className='text-center font-bold text-3xl md:text-4xl  my-12 z-10 mt-20'>Công dụng của Grow Grow</p>
       <div className='md:flex justify-around items-center mx-4 md:mx-12'>
           <div className='md:w-1/3 text-end'>
             <div className='my-6 flex items-center'>
