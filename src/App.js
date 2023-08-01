@@ -61,7 +61,7 @@ function App() {
               <div className='border-2 text-sky-400 border-sky-400 border-black rounded-full w-16 aspect-square ml-4 flex justify-center items-center text-4xl'><IoAccessibilitySharp/></div>
             </div>
           </div>
-          <img loading="lazy" src="Siro-Grow-Grow-1-e1689322443529.png" className='md:w-2/5'></img>
+          <img  src="Siro-Grow-Grow-1-e1689322443529.png" className='md:w-2/5'></img>
           <div className='md:w-1/3'>
           <div className='my-6 flex items-center'>
               <div className='w-3/4 order-2'>Giúp trẻ tăng cường sức đề kháng, hệ miễn dịch của cơ thể</div>
@@ -94,11 +94,11 @@ function App() {
             <Accordion summary="Đối tượng sử dụng"/>
             <Accordion summary="Xuất xứ và nhà máy sản xuất"/>
         </div>
-        <div className='md:w-2/5 mx-8 md:mx-0 mt-12 md:mt-0'><img loading="lazy" src="gh.png"></img></div>
+        <div className='md:w-2/5 mx-8 md:mx-0 mt-12 md:mt-0'><img  src="gh.png"></img></div>
       </div>
 
       <div className='flex md:flex-row flex-col items-center md:justify-between mt-12 py-16 px-2 md:px-20 bg-[#c8ddfa]' ref={buyNow}>
-        <img loading="lazy" src="agd.png" className='w-2/3 md:w-2/5 order-2 md:order-1 mt-8 md:mt-0'></img>
+        <img  src="agd.png" className='w-2/3 md:w-2/5 order-2 md:order-1 mt-8 md:mt-0'></img>
         <div className='md:w-1/2 md:order-2 order-1 '>
           <div className='font-bold text-4xl mx-auto text-center md:text-start mt-8 mb-4 md:mt-0'>Grow Grow</div>
           <div className='text-center md:text-justify'>Các bậc phụ huynh hãy là những ông bố bà mẹ thông thái giúp con nâng cao sức đề kháng cũng như có thể phát triển tốt về chiều cao, thể chất và trí tuệ thông qua một chế độ dinh dưỡng hợp lý và đúng cách. Sản phẩm Grow Grow dạng siro tổng hợp từ 22 thành phần thiết yếu chính là sự lựa chọn hoàn hảo và đầy đủ nhất về dinh dưỡng cho sự phát triển của trẻ.</div>
@@ -297,7 +297,7 @@ function IngredientTab() {
           <div className='md:w-1/2 mx-2 md:mx-12 md:px-4 pb-8 mb-2'>
             {ingredients.map(i => i.ingredient === selected &&
               <>
-                <div className='h-[150px] aspect-square flex items-center mx-auto md:mx-0'><img loading="lazy" src={i.thumbnail}></img></div>
+                <div className='h-[150px] aspect-square flex items-center mx-auto md:mx-0'><img  src={i.thumbnail}></img></div>
                 <div className='font-bold text-center md:text-start'>{i.ingredient}</div>
                 <div className='my-4 border-l-2 border-l-black pl-4 mx-auto md:mx-0 w-min'>{i.amount + "mg"}</div>
                 <div className='text-justify'>{i.description}</div>
