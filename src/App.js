@@ -61,7 +61,7 @@ function App() {
               <div className='border-2 text-sky-400 border-sky-400 border-black rounded-full w-16 aspect-square ml-4 flex justify-center items-center text-4xl'><IoAccessibilitySharp/></div>
             </div>
           </div>
-          <img  src="Siro-Grow-Grow-1-e1689322443529.png" className='md:w-2/5'></img>
+          <img  src="8881630d46e995b7ccf8.jpg" className='md:w-2/5 md:mx-8'></img>
           <div className='md:w-1/3'>
           <div className='my-6 flex items-center'>
               <div className='w-3/4 order-2'>Giúp trẻ tăng cường sức đề kháng, hệ miễn dịch của cơ thể</div>
