@@ -20,7 +20,7 @@ function App() {
   return (
     <div className="App w-full overflow-hidden mx-0 relative">
       <header className='p-4 bg-[#cde4ea] flex items-center md:justify-around justify-between'>
-          <img loading='lazy' src="logo.png"></img>
+          <img src="logo.png"></img>
           <div className='justify-center hidden md:flex'>
               {["Trang chủ", "Giới thiệu", "Sản phẩm", "Tin tức"].map(i => <><p>{i}</p><div className='mx-2 md:mx-4'></div></>)}
               <p>Liên hệ</p>
@@ -37,7 +37,7 @@ function App() {
                     Mua ngay<span className='ml-2'><AiOutlineShoppingCart/></span>         
               </button>
           </div>
-          <div className='md:w-1/2 mx-auto mt-12 md:mt-0 bg-black'><img loading='lazy' src="znfnf.png"></img></div>
+          <div className='md:w-1/2 mx-auto mt-12 md:mt-0 bg-black'><img src="znfnf.png"></img></div>
         </div>
       </div>    
       <p className='text-center font-bold text-4xl  mb-12 z-10 mt-20'>Thành phần và hàm lượng</p>
