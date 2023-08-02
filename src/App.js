@@ -15,7 +15,7 @@ import { useRef, useState } from 'react';
 
 
 function App() {
-  const buyNow = useRef(null)
+
   return (
     <div className="App w-full overflow-hidden mx-0 relative">
       <header className='p-4 bg-[#cde4ea] flex items-center md:justify-around justify-between'>
@@ -31,7 +31,7 @@ function App() {
           <div className='mx-auto'>
             <div className='font-bold text-3xl md:text-4xl text-center'>Grow Grow</div>
             <div className='text-xl mt-5 text-center'>Siro phát triển chiều cao và sức khỏe toàn diện cho trẻ đến từ Nhật Bản</div>
-              <button onClick={() => buyNow.current.scrollIntoView({behavior: 'smooth'})} 
+              <button  
                   className='mx-auto bg-black text-white w-36 h-12 mt-5 rounded-full flex items-center justify-center border border-black hover:bg-white hover:text-black transition '>
                     Mua ngay<span className='ml-2'><AiOutlineShoppingCart/></span>         
               </button>
@@ -97,7 +97,7 @@ function App() {
         <div className='md:w-2/5 mx-8 md:mx-0 mt-12 md:mt-0'><img  src="gh.png"></img></div>
       </div>
 
-      <div className='flex md:flex-row flex-col items-center md:justify-between mt-12 py-16 px-2 md:px-20 bg-[#c8ddfa]' ref={buyNow}>
+      <div className='flex md:flex-row flex-col items-center md:justify-between mt-12 py-16 px-2 md:px-20 bg-[#c8ddfa]'>
         <img  src="agd.png" className='w-2/3 md:w-2/5 order-2 md:order-1 mt-8 md:mt-0'></img>
         <div className='md:w-1/2 md:order-2 order-1 '>
           <div className='font-bold text-4xl mx-auto text-center md:text-start mt-8 mb-4 md:mt-0'>Grow Grow</div>
