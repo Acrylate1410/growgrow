@@ -48,38 +48,38 @@ function App() {
       <p className='text-lg text-center mt-4 md:mb-0 mb-20'>Giúp mẹ chăm con nhàn rỗi và mang đến sức khỏe toàn diện cho con</p>
       <div className='md:flex justify-around items-center mx-4 md:mx-12'>
           <div className='md:w-1/3 text-end'>
-            <div className='my-6 md:my-16 flex items-center'>
+            <div className='my-6 md:my-16 flex items-center md:h-24'>
               <div className='w-3/4'>Bổ sung dinh dưỡng giúp trẻ phát triển toàn diện nhất</div>
               <div className='border-2 text-blue-800 border-blue-800 rounded-full w-16 aspect-square ml-4 flex justify-center items-center text-4xl'><IoMdNutrition/></div>
             </div>
-            <div className='my-6 md:my-16 flex items-center'>
+            <div className='my-6 md:my-16 flex items-center md:h-24'>
               <div className='w-3/4'>Giúp phát triển độ dài xương, phát triển chiều cao cho trẻ</div>
               <div className='border-2 text-blue-800 border-blue-800 border-black rounded-full w-16 aspect-square ml-4 flex justify-center items-center text-4xl'><GiBodyHeight/></div>
             </div>
-            <div className='my-6 md:my-16 flex items-center'>
+            <div className='my-6 md:my-16 flex items-center md:h-24'>
               <div className='w-3/4'>Giúp tăng cường phát triển trí não, tăng khả năng tập trung</div>
               <div className='border-2 text-blue-800 border-blue-800 border-black rounded-full w-16 aspect-square ml-4 flex justify-center items-center text-4xl'><GiBrain/></div>
             </div>
-            <div className='my-6 md:my-16 flex items-center'>
+            <div className='my-6 md:my-16 flex items-center md:h-24'>
               <div className='w-3/4'>Giúp tăng cường thể lực, sức khỏe cho trẻ</div>
               <div className='border-2 text-blue-800 border-blue-800 border-black rounded-full w-16 aspect-square ml-4 flex justify-center items-center text-4xl'><IoAccessibilitySharp/></div>
             </div>
           </div>
           <img alt=""  src="8881630d46e995b7ccf8.jpg" className='md:w-1/3 md:mx-8 my-20 md:mx-0'></img>
           <div className='md:w-1/3'>
-          <div className='my-6 md:my-16 flex items-center'>
+          <div className='my-6 md:my-16 flex items-center md:h-24'>
               <div className='w-3/4 order-2'>Giúp trẻ tăng cường sức đề kháng, hệ miễn dịch của cơ thể</div>
               <div className='border-2 text-blue-800 border-blue-800 border-black rounded-full w-16 aspect-square mr-4 flex justify-center items-center text-4xl'><FaShieldHalved/></div>
             </div>
-            <div className='my-6 md:my-16 flex items-center'>
+            <div className='my-6 md:my-16 flex items-center md:h-24'>
               <div className='w-3/4 order-2'>Bổ sung lợi khuẩn tốt cho hệ tiêu hóa</div>
               <div className='border-2 text-blue-800 border-blue-800 border-black rounded-full w-16 aspect-square mr-4 flex justify-center items-center text-4xl'><FaBacteria/></div>
             </div>
-            <div className='my-6 md:my-16 flex items-center'>
+            <div className='my-6 md:my-16 flex items-center md:h-24'>
               <div className='w-3/4 order-2'>Giúp bổ phổi, tăng cường hệ hô hấp của trẻ, giảm tình trạng viêm phổi, viêm đường hô hấp và ốm vặt</div>
               <div className='border-2 text-blue-800 border-blue-800 border-black rounded-full w-16 aspect-square mr-4 flex justify-center items-center text-4xl'><BsFillLungsFill/></div>
             </div>
-            <div className='my-6 md:my-16 flex items-center'>
+            <div className='my-6 md:my-16 flex items-center md:h-24'>
               <div className='w-3/4 order-2'>Giúp trẻ ăn và ngủ ngon hơn</div>
               <div className='border-2 text-blue-800 border-blue-800 border-black rounded-full w-16 aspect-square mr-4 flex justify-center items-center text-4xl'><GiNightSleep/></div>
             </div>
