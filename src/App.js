@@ -24,7 +24,7 @@ function App() {
             <img alt="" src="gfmt.png"></img>
           </div>
           <div className='justify-center hidden md:flex mx-6'>
-              {["Về Chúng Tôi", "Xuất khẩu", "Liên hệ"].map(i => <><p className='text-center'>{i}</p><div className='mx-2 md:mx-4'></div></>)}
+              {["Về chúng tôi", "Xuất khẩu", "Liên hệ"].map(i => <><p className='text-center'>{i}</p><div className='mx-2 md:mx-4'></div></>)}
           </div>
           <div className='flex items-center'>       
             <SearchButton/>
