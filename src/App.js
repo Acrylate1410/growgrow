@@ -20,9 +20,9 @@ function App() {
     <div className="App w-full overflow-hidden mx-0 relative">
       <header className='header p-4 bg-[#cde4ea] flex items-center md:justify-around justify-between fixed top-0 right-0 left-0 z-10'>
           <img alt="" src="logo.png"></img>
-          <div className='justify-center hidden md:flex'>
+          <div className='justify-center hidden md:flex mx-6'>
               {["Về Chúng Tôi", "Từ Nông Trường Đến Sản phẩm", "Ngôi nhà dinh dưỡng", 
-              "Dấu ấn Tiên Phong", "Xuất khẩu", "Liên hệ"].map(i => <><p>{i}</p><div className='mx-2 md:mx-4'></div></>)}
+              "Dấu ấn Tiên Phong", "Xuất khẩu", "Liên hệ"].map(i => <><p className='text-center'>{i}</p><div className='mx-2 md:mx-4'></div></>)}
           </div>
           <div className='flex items-center'>       
             <SearchButton/>
@@ -181,12 +181,17 @@ function NotableBenefits() {
                  {color:"text-white", img: "gmp-logo.png", bg:"bg-purple-700", id: 7, text: "Sản xuất tại nhà máy đạt chuẩn GMP có tiêu chuẩn chất lượng khắt khe về nguyên liệu, máy móc, công nghệ, quy trình sản xuất và chất lượng thành phẩm với đội ngũ chuyên gia hàng đầu nghiên cứu về nguồn dinh dưỡng & phát triển toàn diện của trẻ"}]
   return (
     <>
-      <Swiper modules={[Pagination]} className="mySwiper h-[600px] md:h-[500px]" pagination={{clickable: true,}}>
+      <Swiper modules={[Pagination]} className="mySwiper h-[750px] md:h-[550px]" pagination={{clickable: true,}}>
           {texts.map(i => <SwiperSlide>
-            <div className={i.color + ' md:flex justify-around items-center h-full text-center md:text-justify ' + i.bg}>
-              <img alt="" src={i.img} className={i.id % 2 === 0 ? 'object-cover mx-auto md:mx-0 py-8 h-1/2 md:h-4/5'
-              : 'object-cover mx-auto md:mx-0 py-8 h-1/2 md:h-4/5 order-2'}></img>
-              <div className='md:w-1/3'>{i.text}</div>
+            <div className={i.color + ' md:flex justify-around items-center h-full ' + i.bg}>
+              <div className={i.id % 2 === 0 ? 'mx-auto md:mx-0 py-8 h-1/2 md:h-4/5 md:w-1/3 flex items-center justify-center' :
+               'mx-auto md:mx-0 py-8 h-1/2 md:h-4/5 order-2 md:w-1/3 overflow-auto flex items-center justify-center'}>
+                <img alt="" src={i.img}></img>
+              </div>
+              <div className='md:w-1/3 '>
+                <div className='font-bold text-3xl md:text-4xl mb-8 text-center md:text-start'>Grow Grow có gì nổi bật?</div>
+                <div className='text-center md:text-justify '>{i.text}</div>
+              </div>
             </div>
           </SwiperSlide>)}
       </Swiper>
