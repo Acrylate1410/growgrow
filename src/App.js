@@ -18,11 +18,13 @@ import { useEffect } from 'react'
 function App() {
   return (
     <div className="App w-full overflow-hidden mx-0 relative">
-      <header className='header p-4 bg-[#cde4ea] flex items-center md:justify-around justify-between fixed top-0 right-0 left-0 z-10'>
-          <img alt="" src="logo.png"></img>
+      <header className='header p-4 bg-[#cde4ea] flex items-center justify-between fixed top-0 right-0 left-0 z-10'>
+          <div className='flex h-12'>
+            <img alt="" src="logo.png"></img>
+            <img alt="" src="gfmt.png"></img>
+          </div>
           <div className='justify-center hidden md:flex mx-6'>
-              {["Về Chúng Tôi", "Từ Nông Trường Đến Sản phẩm", "Ngôi nhà dinh dưỡng", 
-              "Dấu ấn Tiên Phong", "Xuất khẩu", "Liên hệ"].map(i => <><p className='text-center'>{i}</p><div className='mx-2 md:mx-4'></div></>)}
+              {["Về Chúng Tôi", "Xuất khẩu", "Liên hệ"].map(i => <><p className='text-center'>{i}</p><div className='mx-2 md:mx-4'></div></>)}
           </div>
           <div className='flex items-center'>       
             <SearchButton/>
@@ -36,73 +38,72 @@ function App() {
           <div className='mx-auto'>
             <div className='font-bold text-3xl md:text-4xl text-center'>Grow Grow</div>
             <div className='text-xl mt-5 text-center'>Siro phát triển chiều cao và sức khỏe toàn diện cho trẻ đến từ Nhật Bản</div>
-              <button  
-                  className='mx-auto bg-black text-white w-36 h-12 mt-5 rounded-full flex items-center justify-center border border-black hover:bg-white hover:text-black transition '>
-                    Mua ngay<span className='ml-2'><AiOutlineShoppingCart/></span>         
-              </button>
+            <button className='mx-auto bg-black text-white w-36 h-12 mt-5 rounded-full flex items-center justify-center border border-black hover:bg-white hover:text-black transition '>
+                Mua ngay<span className='ml-2'><AiOutlineShoppingCart/></span>         
+            </button>
           </div>
           <div className='md:w-1/2 mx-auto mt-12 md:mt-0 bg-black'><img src="znfnf.png"></img></div>
         </div>
       </div>
-      <p className='text-center font-bold text-3xl md:text-4xl z-10 mt-20 text-blue-800'>Grow Grow</p>
+      <p className='text-center font-bold text-3xl md:text-4xl z-10 mt-20 text-sky-400'>Grow Grow</p>
       <p className='text-lg text-center mt-4 md:mb-0 mb-20'>Giúp mẹ chăm con nhàn rỗi và mang đến sức khỏe toàn diện cho con</p>
       <div className='md:flex justify-around items-center mx-4 md:mx-12'>
-          <div className='md:w-1/3 text-end'>
-            <div className='my-6 md:my-16 flex items-center md:h-24'>
-              <div className='w-3/4'>Bổ sung dinh dưỡng giúp trẻ phát triển toàn diện nhất</div>
-              <div className='border-2 text-blue-800 border-blue-800 rounded-full w-16 aspect-square ml-4 flex justify-center items-center text-4xl'><IoMdNutrition/></div>
+          <div className='md:w-1/3 text-center'>
+            <div className='my-6 md:my-16 md:h-44'>
+              <div className='border-2 text-sky-400 border-sky-400 rounded-full w-16 aspect-square flex justify-center items-center text-4xl mx-auto'><IoMdNutrition/></div>
+              <div className='w-3/4 mx-auto mt-4'>Bổ sung dinh dưỡng giúp trẻ phát triển toàn diện nhất</div>
             </div>
-            <div className='my-6 md:my-16 flex items-center md:h-24'>
-              <div className='w-3/4'>Giúp phát triển độ dài xương, phát triển chiều cao cho trẻ</div>
-              <div className='border-2 text-blue-800 border-blue-800 border-black rounded-full w-16 aspect-square ml-4 flex justify-center items-center text-4xl'><GiBodyHeight/></div>
+            <div className='my-6 md:my-16 md:h-44'>
+              <div className='border-2 text-sky-400 border-sky-400 rounded-full w-16 aspect-square flex justify-center items-center text-4xl mx-auto'><GiBodyHeight/></div>
+              <div className='w-3/4 mx-auto mt-4'>Giúp phát triển độ dài xương, phát triển chiều cao cho trẻ</div>
             </div>
-            <div className='my-6 md:my-16 flex items-center md:h-24'>
-              <div className='w-3/4'>Giúp tăng cường phát triển trí não, tăng khả năng tập trung</div>
-              <div className='border-2 text-blue-800 border-blue-800 border-black rounded-full w-16 aspect-square ml-4 flex justify-center items-center text-4xl'><GiBrain/></div>
+            <div className='my-6 md:my-16 md:h-44'>
+              <div className='border-2 text-sky-400 border-sky-400 rounded-full w-16 aspect-square flex justify-center items-center text-4xl mx-auto'><GiBrain/></div>
+              <div className='w-3/4 mx-auto mt-4'>Giúp tăng cường phát triển trí não, tăng khả năng tập trung</div>
             </div>
-            <div className='my-6 md:my-16 flex items-center md:h-24'>
-              <div className='w-3/4'>Giúp tăng cường thể lực, sức khỏe cho trẻ</div>
-              <div className='border-2 text-blue-800 border-blue-800 border-black rounded-full w-16 aspect-square ml-4 flex justify-center items-center text-4xl'><IoAccessibilitySharp/></div>
+            <div className='my-6 md:my-16 md:h-44'>
+              <div className='border-2 text-sky-400 border-sky-400 rounded-full w-16 aspect-square flex justify-center items-center text-4xl mx-auto'><IoAccessibilitySharp/></div>
+              <div className='w-3/4 mx-auto mt-4'>Giúp tăng cường thể lực, sức khỏe cho trẻ</div>
             </div>
           </div>
           <img alt=""  src="8881630d46e995b7ccf8.jpg" className='md:w-1/3 md:mx-8 my-20 md:mx-0'></img>
-          <div className='md:w-1/3'>
-          <div className='my-6 md:my-16 flex items-center md:h-24'>
-              <div className='w-3/4 order-2'>Giúp trẻ tăng cường sức đề kháng, hệ miễn dịch của cơ thể</div>
-              <div className='border-2 text-blue-800 border-blue-800 border-black rounded-full w-16 aspect-square mr-4 flex justify-center items-center text-4xl'><FaShieldHalved/></div>
+          <div className='md:w-1/3 text-center'>
+            <div className='my-6 md:my-16 md:h-44'>
+              <div className='border-2 text-sky-400 border-sky-400 border-black rounded-full w-16 aspect-square flex justify-center items-center text-4xl mx-auto'><FaShieldHalved/></div>
+              <div className='w-3/4 mx-auto mt-4'>Giúp trẻ tăng cường sức đề kháng, hệ miễn dịch của cơ thể</div>
             </div>
-            <div className='my-6 md:my-16 flex items-center md:h-24'>
-              <div className='w-3/4 order-2'>Bổ sung lợi khuẩn tốt cho hệ tiêu hóa</div>
-              <div className='border-2 text-blue-800 border-blue-800 border-black rounded-full w-16 aspect-square mr-4 flex justify-center items-center text-4xl'><FaBacteria/></div>
+            <div className='my-6 md:my-16 md:h-44'>
+              <div className='border-2 text-sky-400 border-sky-400 border-black rounded-full w-16 aspect-square flex justify-center items-center text-4xl mx-auto'><FaBacteria/></div>
+              <div className='w-3/4 mx-auto mt-4'>Bổ sung lợi khuẩn tốt cho hệ tiêu hóa</div>
             </div>
-            <div className='my-6 md:my-16 flex items-center md:h-24'>
-              <div className='w-3/4 order-2'>Giúp bổ phổi, tăng cường hệ hô hấp của trẻ, giảm tình trạng viêm phổi, viêm đường hô hấp và ốm vặt</div>
-              <div className='border-2 text-blue-800 border-blue-800 border-black rounded-full w-16 aspect-square mr-4 flex justify-center items-center text-4xl'><BsFillLungsFill/></div>
+            <div className='my-6 md:my-16 md:h-44'>
+              <div className='border-2 text-sky-400 border-sky-400 border-black rounded-full w-16 aspect-square flex justify-center items-center text-4xl mx-auto'><BsFillLungsFill/></div>
+              <div className='w-3/4 mx-auto mt-4'>Giúp bổ phổi, tăng cường hệ hô hấp của trẻ, giảm tình trạng viêm phổi, viêm đường hô hấp và ốm vặt</div>
             </div>
-            <div className='my-6 md:my-16 flex items-center md:h-24'>
-              <div className='w-3/4 order-2'>Giúp trẻ ăn và ngủ ngon hơn</div>
-              <div className='border-2 text-blue-800 border-blue-800 border-black rounded-full w-16 aspect-square mr-4 flex justify-center items-center text-4xl'><GiNightSleep/></div>
+            <div className='my-6 md:my-16 md:h-44'>
+              <div className='border-2 text-sky-400 border-sky-400 border-black rounded-full w-16 aspect-square flex justify-center items-center text-4xl mx-auto'><GiNightSleep/></div>
+              <div className='w-3/4 mx-auto mt-4'>Giúp trẻ ăn và ngủ ngon hơn</div>
             </div>
           </div>
       </div>
       <NotableBenefits/>
-      <div className='font-bold text-4xl mx-auto text-center mb-8 text-blue-800 mt-20'>Quy cách đóng gói</div>
+      <div className='font-bold text-4xl mx-auto text-center mb-8 text-sky-400 mt-20'>Quy cách đóng gói</div>
       <div className='flex md:flex-row flex-col items-center md:justify-between py-4 px-2 md:px-20'>
         <img alt=""  src="gh.png" className='w-2/3 md:w-2/5 order-2 md:order-1 mt-8 md:mt-0'></img>
         <div className='w-full md:w-1/2 md:order-2 order-1 '>
           <div className='flex'>
             <div className='pt-4 w-1/2'>
-              <div className='border-l-2 pl-4 border-l-blue-800 text-blue-800 text-3xl font-bold w-1/2 mx-auto'>30</div>
+              <div className='border-l-2 pl-4 border-l-sky-400 text-sky-400 text-3xl font-bold w-1/2 mx-auto'>30</div>
               <div className='mt-3 w-1/2 mx-auto text-lg'>gói/hộp</div>
             </div>
             <div className='pt-4 w-1/2'>
-              <div className='border-l-2 pl-4 border-l-blue-800 text-blue-800 text-3xl font-bold w-1/2 mx-auto'>30</div>
+              <div className='border-l-2 pl-4 border-l-sky-400 text-sky-400 text-3xl font-bold w-1/2 mx-auto'>30</div>
               <div className='mt-3 w-1/2 mx-auto text-lg'>gram/gói</div>
             </div>
           </div>
         </div>
       </div>  
-      <p className='text-center font-bold text-3xl md:text-4xl  mb-12 z-10 mt-20 text-blue-800'>Thành phần dinh dưỡng</p>
+      <p className='text-center font-bold text-3xl md:text-4xl  mb-12 z-10 mt-20 text-sky-400'>Thành phần dinh dưỡng</p>
       <IngredientTab/>
       <Accordion/>
       <footer className='bg-black md:flex justify-around text-white py-6 text-center md:text-start'>
@@ -111,7 +112,7 @@ function App() {
               <p>Địa chỉ: 15 Lý Nam Đế, Hoàn Kiếm, Hà Nội</p>
               <p>Hotline: 088 960 3579</p>
           </div>
-          <div className='my-6 md:my-0'>
+          <div className='my-6 md:my-0 md:mx-6'>
               <p>KẾT NỐI CHÚNG TÔI QUA</p>
               <div className='flex justify-center md:justify-around mt-2'>
                   <BsFacebook className='cursor-pointer '/>
@@ -164,59 +165,44 @@ function HamburgerComponent() {
       <div className="z-10 relative"><Hamburger toggled={isOpen} toggle={setOpen} size={20}/></div>
       <div className={'fixed top-0 bottom-0 left-0 right-0 bg-[#cde4ea] flex justify-center items-center ' + status}>
         <div>
-        {["Về Chúng Tôi", "Từ Nông Trường Đến Sản phẩm", "Ngôi nhà dinh dưỡng", 
-          "Dấu ấn Tiên Phong", "Xuất khẩu", "Liên hệ"].map(i => <><p>{i}</p><div className='my-6'></div></>)}
+        {["Về Chúng Tôi", "Xuất khẩu", "Liên hệ"].map(i => <><p>{i}</p><div className='my-6'></div></>)}
         </div>
       </div>
     </div>
   )
 }
 function NotableBenefits() {
-  const texts = [{color:"text-white", img: "gdfg.png", bg:"bg-red-600", id: 1, text: "Sản phẩm hàng đầu của Nhật Bản về SỰ PHÁT TRIỂN TOÀN DIỆN dặc biệt là SỰ PHÁT TRIỂN CHIỀU CAO của trẻ với tổng hợp 22 thành phần chọn lọc."},
-                 {color: "text-white", img: "sdfg.png", bg:"bg-orange-500", id: 2, text: "Các chuyên gia Nhật Bản đã xây dựng một công thức hoàn hảo không chỉ tập trung vào Canxi mà còn có các thành phần khác như Men chứa kẽm, Peptide lòng đỏ trứng, vitamin D3... Sự kết hợp này sẽ giúp xương phát triển tối đa để tăng chiều cao cho trẻ và ưu việt hơn rất nhiều so với những sản phẩm tăng cường chiều cao thông thường chỉ đơn thuần tập trung vào 1 thành phần tốt cho xương là canxi."},
-                 {color: "", img: "Artboard 6.png", bg:"bg-yellow-300", id: 3, text: "Đây là một sản phẩm với công thức không chỉ giúp hấp thụ nhóm các chất dinh dưỡng để tăng chiều cao từ sản phẩm mà còn hấp thụ canxi tự nhiên (thông qua thức ăn hàng ngày: trứng, sữa, phomai, tôm, cua, …) bằng cách đề cao nhóm 3 lợi khuẩn axit lactic, Bifidobacteria và Oligosaccharide giúp trẻ có 1 hệ tiêu hóa khỏe mạnh hấp thu & chuyển hóa các chất dinh dưỡng ở mức cao nhất. Sức khỏe đường ruột chiếm 70% sức khỏe tổng thể nên đây là yếu tố cốt lõi giúp trẻ có 1 cơ thể khỏe mạnh & tăng chiều cao tối đa"},
-                 {color: "", img: "kid-e1604326070805.png", bg:"bg-lime-400", id: 4, text: "Thành phần có vitamin tổng hợp, keo ong… và các dưỡng chất cần thiết khác giúp trẻ có có hệ hô hấp và cơ thể khỏe mạnh, phòng ngừa sự tấn công của các loại vi khuẩn và vi rút, tăng cường sức đề kháng và khả năng miễn dịch."},
-                 {color:"text-white", img: "outside-the-box-cropped.png", bg:"bg-indigo-700", id: 5, text: " Sản phẩm giúp trẻ không chỉ giúp trẻ phát triển về thể chất, chiều cao mà còn giúp tăng cường trí nhớ, cải thiện trí thông minh nhờ DHA/EPA cải thiện chức năng não bộ, Phosphatidylserin phát triển và kích hoạt các tế bào não."},
-                 {color:"text-white", img: "drop-5818339_1280.png", bg:"bg-blue-900", id: 6, text: "Mùi vị thơm ngon, độ ngọt vừa phải và không có đường có thể gây sâu răng cho trẻ; Bào chế dạng nước có khả năng hấp thu tốt nhất cho cơ thể so với các dạng bào chế khác; 1 gói 30ml tiện lợi để sử dụng và bảo quản."},
-                 {color:"text-white", img: "gmp-logo.png", bg:"bg-purple-700", id: 7, text: "Sản xuất tại nhà máy đạt chuẩn GMP có tiêu chuẩn chất lượng khắt khe về nguyên liệu, máy móc, công nghệ, quy trình sản xuất và chất lượng thành phẩm với đội ngũ chuyên gia hàng đầu nghiên cứu về nguồn dinh dưỡng & phát triển toàn diện của trẻ"}]
+  const texts = [{img: "gdfg.png", id: 1, text: "Sản phẩm hàng đầu của Nhật Bản về SỰ PHÁT TRIỂN TOÀN DIỆN dặc biệt là SỰ PHÁT TRIỂN CHIỀU CAO của trẻ với tổng hợp 22 thành phần chọn lọc."},
+                 {img: "sdfg.png", id: 2, text: "Các chuyên gia Nhật Bản đã xây dựng một công thức hoàn hảo không chỉ tập trung vào Canxi mà còn có các thành phần khác như Men chứa kẽm, Peptide lòng đỏ trứng, vitamin D3... Sự kết hợp này sẽ giúp xương phát triển tối đa để tăng chiều cao cho trẻ và ưu việt hơn rất nhiều so với những sản phẩm tăng cường chiều cao thông thường chỉ đơn thuần tập trung vào 1 thành phần tốt cho xương là canxi."},
+                 {img: "Artboard 6.png", id: 3, text: "Đây là một sản phẩm với công thức không chỉ giúp hấp thụ nhóm các chất dinh dưỡng để tăng chiều cao từ sản phẩm mà còn hấp thụ canxi tự nhiên (thông qua thức ăn hàng ngày: trứng, sữa, phomai, tôm, cua, …) bằng cách đề cao nhóm 3 lợi khuẩn axit lactic, Bifidobacteria và Oligosaccharide giúp trẻ có 1 hệ tiêu hóa khỏe mạnh hấp thu & chuyển hóa các chất dinh dưỡng ở mức cao nhất. Sức khỏe đường ruột chiếm 70% sức khỏe tổng thể nên đây là yếu tố cốt lõi giúp trẻ có 1 cơ thể khỏe mạnh & tăng chiều cao tối đa"},
+                 {img: "kid-e1604326070805.png", id: 4, text: "Thành phần có vitamin tổng hợp, keo ong… và các dưỡng chất cần thiết khác giúp trẻ có có hệ hô hấp và cơ thể khỏe mạnh, phòng ngừa sự tấn công của các loại vi khuẩn và vi rút, tăng cường sức đề kháng và khả năng miễn dịch."},
+                 {img: "outside-the-box-cropped.png", id: 5, text: " Sản phẩm giúp trẻ không chỉ giúp trẻ phát triển về thể chất, chiều cao mà còn giúp tăng cường trí nhớ, cải thiện trí thông minh nhờ DHA/EPA cải thiện chức năng não bộ, Phosphatidylserin phát triển và kích hoạt các tế bào não."},
+                 {img: "drop-5818339_1280.png", id: 6, text: "Mùi vị thơm ngon, độ ngọt vừa phải và không có đường có thể gây sâu răng cho trẻ; Bào chế dạng nước có khả năng hấp thu tốt nhất cho cơ thể so với các dạng bào chế khác; 1 gói 30ml tiện lợi để sử dụng và bảo quản."},
+                 {img: "gmp-logo.png", id: 7, text: "Sản xuất tại nhà máy đạt chuẩn GMP có tiêu chuẩn chất lượng khắt khe về nguyên liệu, máy móc, công nghệ, quy trình sản xuất và chất lượng thành phẩm với đội ngũ chuyên gia hàng đầu nghiên cứu về nguồn dinh dưỡng & phát triển toàn diện của trẻ"}]
   return (
     <>
-      <Swiper modules={[Pagination]} className="mySwiper h-[750px] md:h-[550px]" pagination={{clickable: true,}}>
-          {texts.map(i => <SwiperSlide>
-            <div className={i.color + ' md:flex justify-around items-center h-full ' + i.bg}>
+          {texts.map(i =>
+            <div className={'py-8 md:flex justify-around items-center h-full bg-[#c8ddfa] border-b border-b-black '}>
               <div className={i.id % 2 === 0 ? 'mx-auto md:mx-0 py-8 h-1/2 md:h-4/5 md:w-1/3 flex items-center justify-center' :
-               'mx-auto md:mx-0 py-8 h-1/2 md:h-4/5 order-2 md:w-1/3 overflow-auto flex items-center justify-center'}>
+               'mx-auto md:mx-0 py-8 h-1/2 md:h-4/5 order-2 md:w-1/3 flex items-center justify-center'}>
                 <img alt="" src={i.img}></img>
               </div>
               <div className='md:w-1/3 '>
                 <div className='font-bold text-3xl md:text-4xl mb-8 text-center md:text-start'>Grow Grow có gì nổi bật?</div>
                 <div className='text-center md:text-justify '>{i.text}</div>
               </div>
-            </div>
-          </SwiperSlide>)}
-      </Swiper>
+            </div>)}
     </>
   )
 }
 function Accordion() {
-  const [isOpen, setOpen] = useState(false)
-  let height, direction;
-  if (isOpen) {
-      height = "h-48 md:h-28"
-      direction = "rotate-180"
-  } else {
-      height = "h-0"
-      direction = "rotate-0"
-  }
   return (
       <div className='md:w-3/5 mx-auto my-12'>
-        <div className='flex justify-between items-center cursor-pointer mx-4 mt-8  text-blue-800' 
-        onClick={() => setOpen(!isOpen)}>
+        <div className='flex justify-between items-center mx-4 mt-8  text-sky-400' >
           <div className='font-bold text-xl md:text-2xl'>Cách sử dụng</div>
-          <div className='h-[2.5px] flex-1 mx-4  bg-blue-800'></div>
-          <FaAngleDown className={"transition " + direction}/>
+          <div className='h-[2.5px] flex-1 mx-4  bg-sky-400'></div>
         </div>
-        <div className={"px-2 transition-[height] overflow-hidden mx-2 " + height}>
+        <div className={"px-2 transition-[height] overflow-hidden mx-2 "}>
           <p className='pt-4'>• Liều dùng: 1 gói 1 ngày.</p>
           <p>• Nên uống buổi sáng sau hoặc trước khi ăn 30 phút đến 1 tiếng.</p>
           <p>• Nên sử dụng theo liệu trình tối thiểu 3 đến 5 tháng để đạt hiệu quả tối đa.</p>
@@ -252,18 +238,18 @@ function IngredientTab() {
   ]
       return (
         <div id="ingredients" className='md:w-3/5 mx-auto'>
-            <div className='flex justify-between font-bold px-4 py-4 text-white rounded-t-xl bg-blue-800 items-center'>
+            <div className='flex justify-between font-bold px-4 py-4 text-white rounded-t-xl bg-sky-400 items-center'>
                 <p>Thành phần </p>
                 <p>Hàm lượng (mg)</p>
             </div>
             <div className='h-[500px] overflow-y-scroll'>
             {ingredients.map(i =>
               <>
-                    <div className='flex justify-between border-b py-4 px-4'>
-                          <p>{i.ingredient}</p>
-                          <p>{i.amount}</p>
-                    </div>
-                  </>
+                <div className='flex justify-between border-b py-4 px-4'>
+                      <p>{i.ingredient}</p>
+                      <p>{i.amount}</p>
+                </div>
+              </>
             )}
             </div>
           </div>
