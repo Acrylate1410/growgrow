@@ -180,7 +180,7 @@ function NotableBenefits() {
                  {img: "drop-5818339_1280.png", id: 6, text: "Mùi vị thơm ngon, độ ngọt vừa phải và không có đường có thể gây sâu răng cho trẻ; Bào chế dạng nước có khả năng hấp thu tốt nhất cho cơ thể so với các dạng bào chế khác; 1 gói 30ml tiện lợi để sử dụng và bảo quản."},
                  {img: "gmp-logo.png", id: 7, text: "Sản xuất tại nhà máy đạt chuẩn GMP có tiêu chuẩn chất lượng khắt khe về nguyên liệu, máy móc, công nghệ, quy trình sản xuất và chất lượng thành phẩm với đội ngũ chuyên gia hàng đầu nghiên cứu về nguồn dinh dưỡng & phát triển toàn diện của trẻ"}]
   return (
-    <div className='mt-8'>
+    <div className='mt-16'>
           {texts.map(i =>
             <div className={'py-8 md:flex justify-around items-center h-full bg-[#c8ddfa] border-b border-b-black '}>
               <div className={i.id % 2 === 0 ? 'mx-auto md:mx-0 py-8 h-1/2 md:h-4/5 md:w-1/3 flex items-center justify-center' :
