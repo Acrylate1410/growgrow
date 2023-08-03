@@ -4,14 +4,15 @@ import {GiBodyHeight, GiNightSleep, GiBrain} from 'react-icons/gi'
 import {FaBacteria} from 'react-icons/fa'
 import {BsFillLungsFill, BsFacebook, BsInstagram, BsTwitter, BsPinterest} from 'react-icons/bs'
 import {FaShieldHalved, FaAngleDown} from 'react-icons/fa6'
-import {AiOutlineMail, AiOutlineShoppingCart} from 'react-icons/ai'
+import {AiOutlineMail, AiOutlineShoppingCart, AiOutlineSearch} from 'react-icons/ai'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import Hamburger from 'hamburger-react'
 import 'swiper/css';
 import 'swiper/css/pagination';
 import './App.css';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
+import { useEffect } from 'react'
 
 
 function App() {
@@ -23,7 +24,12 @@ function App() {
               {["Về Chúng Tôi", "Từ Nông Trường Đến Sản phẩm", "Ngôi nhà dinh dưỡng", 
               "Dấu ấn Tiên Phong", "Xuất khẩu", "Liên hệ"].map(i => <><p>{i}</p><div className='mx-2 md:mx-4'></div></>)}
           </div>
-          <HamburgerComponent/>
+          <div className='flex items-center'>       
+            <SearchButton/>
+            <div className='mx-1.5'></div>
+            <HamburgerComponent/>
+          </div>
+          
       </header>
       <div className="bg-[url(/public/A.png)] bg-[length:100%_100%] h-[600px] flex justify-center px-12 mt-20">
         <div className='my-24'>  
@@ -38,43 +44,42 @@ function App() {
           <div className='md:w-1/2 mx-auto mt-12 md:mt-0 bg-black'><img src="znfnf.png"></img></div>
         </div>
       </div>
-
       <p className='text-center font-bold text-3xl md:text-4xl z-10 mt-20 text-blue-800'>Grow Grow</p>
       <p className='text-lg text-center mt-4 md:mb-0 mb-20'>Giúp mẹ chăm con nhàn rỗi và mang đến sức khỏe toàn diện cho con</p>
       <div className='md:flex justify-around items-center mx-4 md:mx-12'>
           <div className='md:w-1/3 text-end'>
-            <div className='my-6 flex items-center'>
+            <div className='my-6 md:my-16 flex items-center'>
               <div className='w-3/4'>Bổ sung dinh dưỡng giúp trẻ phát triển toàn diện nhất</div>
               <div className='border-2 text-blue-800 border-blue-800 rounded-full w-16 aspect-square ml-4 flex justify-center items-center text-4xl'><IoMdNutrition/></div>
             </div>
-            <div className='my-6 flex items-center'>
+            <div className='my-6 md:my-16 flex items-center'>
               <div className='w-3/4'>Giúp phát triển độ dài xương, phát triển chiều cao cho trẻ</div>
               <div className='border-2 text-blue-800 border-blue-800 border-black rounded-full w-16 aspect-square ml-4 flex justify-center items-center text-4xl'><GiBodyHeight/></div>
             </div>
-            <div className='my-6 flex items-center'>
+            <div className='my-6 md:my-16 flex items-center'>
               <div className='w-3/4'>Giúp tăng cường phát triển trí não, tăng khả năng tập trung</div>
               <div className='border-2 text-blue-800 border-blue-800 border-black rounded-full w-16 aspect-square ml-4 flex justify-center items-center text-4xl'><GiBrain/></div>
             </div>
-            <div className='my-6 flex items-center'>
+            <div className='my-6 md:my-16 flex items-center'>
               <div className='w-3/4'>Giúp tăng cường thể lực, sức khỏe cho trẻ</div>
               <div className='border-2 text-blue-800 border-blue-800 border-black rounded-full w-16 aspect-square ml-4 flex justify-center items-center text-4xl'><IoAccessibilitySharp/></div>
             </div>
           </div>
           <img alt=""  src="8881630d46e995b7ccf8.jpg" className='md:w-1/3 md:mx-8 my-20 md:mx-0'></img>
           <div className='md:w-1/3'>
-          <div className='my-6 flex items-center'>
+          <div className='my-6 md:my-16 flex items-center'>
               <div className='w-3/4 order-2'>Giúp trẻ tăng cường sức đề kháng, hệ miễn dịch của cơ thể</div>
               <div className='border-2 text-blue-800 border-blue-800 border-black rounded-full w-16 aspect-square mr-4 flex justify-center items-center text-4xl'><FaShieldHalved/></div>
             </div>
-            <div className='my-6 flex items-center'>
+            <div className='my-6 md:my-16 flex items-center'>
               <div className='w-3/4 order-2'>Bổ sung lợi khuẩn tốt cho hệ tiêu hóa</div>
               <div className='border-2 text-blue-800 border-blue-800 border-black rounded-full w-16 aspect-square mr-4 flex justify-center items-center text-4xl'><FaBacteria/></div>
             </div>
-            <div className='my-6 flex items-center'>
+            <div className='my-6 md:my-16 flex items-center'>
               <div className='w-3/4 order-2'>Giúp bổ phổi, tăng cường hệ hô hấp của trẻ, giảm tình trạng viêm phổi, viêm đường hô hấp và ốm vặt</div>
               <div className='border-2 text-blue-800 border-blue-800 border-black rounded-full w-16 aspect-square mr-4 flex justify-center items-center text-4xl'><BsFillLungsFill/></div>
             </div>
-            <div className='my-6 flex items-center'>
+            <div className='my-6 md:my-16 flex items-center'>
               <div className='w-3/4 order-2'>Giúp trẻ ăn và ngủ ngon hơn</div>
               <div className='border-2 text-blue-800 border-blue-800 border-black rounded-full w-16 aspect-square mr-4 flex justify-center items-center text-4xl'><GiNightSleep/></div>
             </div>
@@ -96,17 +101,10 @@ function App() {
             </div>
           </div>
         </div>
-      </div>
-
-
-      
+      </div>  
       <p className='text-center font-bold text-3xl md:text-4xl  mb-12 z-10 mt-20 text-blue-800'>Thành phần dinh dưỡng</p>
       <IngredientTab/>
       <Accordion/>
-      
-
-      
- 
       <footer className='bg-black md:flex justify-around text-white py-6 text-center md:text-start'>
           <div>
               <p>Nhà phân phối: TRƯƠNG THANH TÚ – MẸ VÀ BÉ</p>
@@ -136,29 +134,44 @@ function App() {
   );
 }
 
-function HamburgerComponent() {
-  const [isOpen, setOpen] = useState(false)
-  let width, mask;
-  if (isOpen) {
-    width = "w-1/2"
-    mask = ""
-  } else {
-    width = "w-0"
-    mask = "hidden"
+function SearchButton() {
+  const [toggle, setToggle] = useState(false)
+  let style
+  toggle ? style = "w-40 md:w-60 pl-2 border" : style = "w-0 pl-0"
+  const ref = useRef(null)
+  useEffect(() => {
+      document.addEventListener("click", searchOff, true)
+  }, [])
+  const searchOff = (e) => {
+    !ref.current.contains(e.target) && setToggle(false)
   }
   return (
-    <div className="md:hidden">
-      <Hamburger toggled={isOpen} toggle={setOpen} size={20}/>
-      <div className={'fixed top-0 bottom-0 right-0 left-0 ' + mask} onClick={() => setOpen(false)}></div>
-                <div className={'fixed top-[80px] bottom-0 right-0 h-[100vh] transition-[width] bg-[#cde4ea] ' + width}>
-                {["Trang chủ", "Giới thiệu", "Sản phẩm", "Tin tức", "Liên hệ"].map(i => 
-                <div className='m-2'>{i}</div>)}
+    <>
+      <button onClick={() => setToggle(true)}><AiOutlineSearch className='text-2xl'/></button>
+      <form className='fixed right-24 md:right-32 top-7'>
+        <input ref={ref} className={'border-black rounded-lg transition-[width] ' + style}></input>
+      </form>
+    </>
+  )
+}
+
+function HamburgerComponent() {
+  const [isOpen, setOpen] = useState(false)
+  let status
+  isOpen ? status = "" : status = "hidden"
+  return (
+    <div>
+      <div className="z-10 relative"><Hamburger toggled={isOpen} toggle={setOpen} size={20}/></div>
+      <div className={'fixed top-0 bottom-0 left-0 right-0 bg-[#cde4ea] flex justify-center items-center ' + status}>
+        <div>
+        {["Về Chúng Tôi", "Từ Nông Trường Đến Sản phẩm", "Ngôi nhà dinh dưỡng", 
+          "Dấu ấn Tiên Phong", "Xuất khẩu", "Liên hệ"].map(i => <><p>{i}</p><div className='my-6'></div></>)}
+        </div>
       </div>
     </div>
   )
 }
 function NotableBenefits() {
-
   const texts = [{color:"text-white", img: "gdfg.png", bg:"bg-red-600", id: 1, text: "Sản phẩm hàng đầu của Nhật Bản về SỰ PHÁT TRIỂN TOÀN DIỆN dặc biệt là SỰ PHÁT TRIỂN CHIỀU CAO của trẻ với tổng hợp 22 thành phần chọn lọc."},
                  {color: "text-white", img: "sdfg.png", bg:"bg-orange-500", id: 2, text: "Các chuyên gia Nhật Bản đã xây dựng một công thức hoàn hảo không chỉ tập trung vào Canxi mà còn có các thành phần khác như Men chứa kẽm, Peptide lòng đỏ trứng, vitamin D3... Sự kết hợp này sẽ giúp xương phát triển tối đa để tăng chiều cao cho trẻ và ưu việt hơn rất nhiều so với những sản phẩm tăng cường chiều cao thông thường chỉ đơn thuần tập trung vào 1 thành phần tốt cho xương là canxi."},
                  {color: "", img: "Artboard 6.png", bg:"bg-yellow-300", id: 3, text: "Đây là một sản phẩm với công thức không chỉ giúp hấp thụ nhóm các chất dinh dưỡng để tăng chiều cao từ sản phẩm mà còn hấp thụ canxi tự nhiên (thông qua thức ăn hàng ngày: trứng, sữa, phomai, tôm, cua, …) bằng cách đề cao nhóm 3 lợi khuẩn axit lactic, Bifidobacteria và Oligosaccharide giúp trẻ có 1 hệ tiêu hóa khỏe mạnh hấp thu & chuyển hóa các chất dinh dưỡng ở mức cao nhất. Sức khỏe đường ruột chiếm 70% sức khỏe tổng thể nên đây là yếu tố cốt lõi giúp trẻ có 1 cơ thể khỏe mạnh & tăng chiều cao tối đa"},
@@ -191,7 +204,7 @@ function Accordion() {
       direction = "rotate-0"
   }
   return (
-      <div className='md:w-3/5 mx-auto mb-8 mt-12'>
+      <div className='md:w-3/5 mx-auto my-12'>
         <div className='flex justify-between items-center cursor-pointer mx-4 mt-8  text-blue-800' 
         onClick={() => setOpen(!isOpen)}>
           <div className='font-bold text-xl md:text-2xl'>Cách sử dụng</div>
