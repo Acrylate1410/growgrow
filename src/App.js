@@ -233,7 +233,7 @@ function IngredientTab() {
       return (
         <>
         <p className='text-center font-bold text-3xl md:text-4xl  mb-12 z-10 mt-20 text-sky-400'>Thành phần dinh dưỡng</p>
-        <div id="ingredients" className='md:w-3/5 mx-auto'>
+        <div id="ingredients" className='md:w-3/5 md:mx-auto mx-2'>
             <div className='flex justify-between font-bold px-4 py-4 text-white rounded-t-xl bg-sky-400 items-center'>
                 <p>Thành phần </p>
                 <p>Hàm lượng (mg/gói)</p>
