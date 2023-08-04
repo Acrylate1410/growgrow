@@ -122,7 +122,7 @@ function WidCol(props) {
               {props.data.map(i => 
                   <div className='my-6 md:my-16 md:h-44'>
                           <div className='border-2 text-sky-400 border-sky-400 rounded-full w-16 aspect-square flex justify-center items-center text-4xl mx-auto'>{i.logo}</div>
-                          <div className='w-3/4 mx-auto mt-4'>{i.text}</div>
+                          <div className='md:w-3/4 mx-auto mt-4'>{i.text}</div>
                   </div>
               )}  
     </div>
