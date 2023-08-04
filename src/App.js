@@ -20,20 +20,20 @@ function App() {
     <div className="App w-full overflow-hidden mx-0 relative">
       <header className='header p-4 bg-[#cde4ea] flex items-center justify-between fixed top-0 right-0 left-0 z-10'>
           <div className='flex h-12'>
-            <img alt="" src="logo.png"></img>
-            <img alt="" src="gfmt.png"></img>
+              <img alt="" src="logo.png"></img>
+              <img alt="" src="gfmt.png"></img>
           </div>
           <div className='justify-center hidden md:flex mx-6'>
               {["Về chúng tôi", "Xuất khẩu", "Liên hệ"].map(i => 
-              <div key={i} className='flex'>
-                <p className='text-center'>{i}</p>
-                <div className='mx-2 md:mx-4'></div>
+                  <div key={i} className='flex'>
+                    <p className='text-center'>{i}</p>
+                    <div className='mx-2 md:mx-4'></div>
               </div>)}
           </div>
           <div className='flex items-center'>       
-            <SearchButton/>
-            <div className='mx-1.5'></div>
-            <HamburgerComponent/>
+              <SearchButton/>
+              <div className='mx-1.5'></div>
+              <HamburgerComponent/>
           </div>
       </header>
       <div className="bg-[url(/public/A.png)] bg-[length:100%_100%] h-[600px] flex justify-center px-12 mt-20">
@@ -63,8 +63,7 @@ function App() {
             )}
           </div>
         </div>
-      </div>  
-      
+      </div> 
       <IngredientTab/>
       <Accordion/>
       <footer className='bg-black md:flex justify-around text-white py-6 text-center md:text-start'>
@@ -215,8 +214,7 @@ function Accordion() {
 }
 
 function IngredientTab() {
-  const ingredients = [
-        {ingredient: "Canxi lactate", amount: "30"},
+  const ingredients = [{ingredient: "Canxi lactate", amount: "30"},
         {ingredient: "Vitamin D3 (0,25%)", amount: "2"},
         {ingredient: "Peptide lòng đỏ trứng", amount: "10"},
         {ingredient: "Men chứa kẽm (10%)", amount: "20"},
@@ -240,21 +238,21 @@ function IngredientTab() {
   ]
       return (
         <>
-        <p className='text-center font-bold text-3xl md:text-4xl  mb-12 z-10 mt-20 text-sky-400'>Thành phần dinh dưỡng</p>
-        <div id="ingredients" className='md:w-3/5 md:mx-auto mx-2'>
+          <p className='text-center font-bold text-3xl md:text-4xl  mb-12 z-10 mt-20 text-sky-400'>Thành phần dinh dưỡng</p>
+          <div id="ingredients" className='md:w-3/5 md:mx-auto mx-2'>
             <div className='flex justify-between font-bold px-4 py-4 text-white rounded-t-xl bg-sky-400 items-center'>
                 <p>Thành phần </p>
                 <p>Hàm lượng (mg/gói)</p>
             </div>
             <div className='h-[500px] overflow-y-scroll'>
-            {ingredients.map(i =>
-              <div key={i.ingredient}>
-                <div className='flex justify-between border-b py-4 px-4'>
-                      <p>{i.ingredient}</p>
-                      <p>{i.amount}</p>
-                </div>
-              </div>
-            )}
+                {ingredients.map(i =>
+                  <div key={i.ingredient}>
+                    <div className='flex justify-between border-b py-4 px-4'>
+                          <p>{i.ingredient}</p>
+                          <p>{i.amount}</p>
+                    </div>
+                  </div>
+                )}
             </div>
           </div>
         </>
