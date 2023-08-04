@@ -183,7 +183,7 @@ function NotableBenefits() {
               </div>
               <div className='md:w-1/3 '>
                 <div className='font-bold text-3xl md:text-4xl mb-8 text-center md:text-start'>Grow Grow có gì nổi bật?</div>
-                <div className='text-center md:text-justify '>{i.text}</div>
+                <div className='text-center md:text-justify mx-2 md:mx-0'>{i.text}</div>
               </div>
             </div>)}
     </div>
