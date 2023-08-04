@@ -177,8 +177,8 @@ function NotableBenefits() {
     <div className='mt-16'>
           {texts.map(i =>
             <div className={'py-8 md:flex justify-around items-center h-full bg-[#c8ddfa] border-b border-b-black '}>
-              <div className={i.id % 2 === 0 ? 'mx-auto md:mx-0 py-8 h-1/2 md:h-4/5 md:w-1/3 flex items-center justify-center' :
-               'mx-auto md:mx-0 py-8 h-1/2 md:h-4/5 order-2 md:w-1/3 flex items-center justify-center'}>
+              <div className={i.id % 2 === 0 ? 'mx-auto md:mx-0 py-8 h-1/2 md:h-4/5 w-1/2 md:w-1/3 flex items-center justify-center' :
+               'mx-auto md:mx-0 py-8 h-1/2 md:h-4/5 order-2 w-1/2 md:w-1/3 flex items-center justify-center'}>
                 <img alt="" src={i.img}></img>
               </div>
               <div className='md:w-1/3 '>
