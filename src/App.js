@@ -159,7 +159,7 @@ function HamburgerComponent() {
       <div className="z-10 relative"><Hamburger toggled={isOpen} toggle={setOpen} size={20}/></div>
       <div className={'fixed top-0 bottom-0 left-0 right-0 bg-[#cde4ea] flex justify-center items-center ' + status}>
         <div>
-        {["Về Chúng Tôi", "Xuất khẩu", "Liên hệ"].map(i => <><p>{i}</p><div className='my-6'></div></>)}
+        {["Về chúng tôi", "Xuất khẩu", "Liên hệ"].map(i => <><p>{i}</p><div className='my-6'></div></>)}
         </div>
       </div>
     </>
