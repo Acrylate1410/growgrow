@@ -236,7 +236,7 @@ function IngredientTab() {
         <div id="ingredients" className='md:w-3/5 mx-auto'>
             <div className='flex justify-between font-bold px-4 py-4 text-white rounded-t-xl bg-sky-400 items-center'>
                 <p>Thành phần </p>
-                <p>Hàm lượng (mg)</p>
+                <p>Hàm lượng (mg/gói)</p>
             </div>
             <div className='h-[500px] overflow-y-scroll'>
             {ingredients.map(i =>
