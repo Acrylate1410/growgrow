@@ -143,8 +143,8 @@ function SearchButton() {
   return (
     <>
       <button onClick={() => setToggle(true)}><AiOutlineSearch className='text-2xl'/></button>
-      <form className='fixed right-24 md:right-32 top-7'>
-        <input ref={ref} className={'border-black rounded-lg transition-[width] ' + style}></input>
+      <form className='fixed right-28 md:right-32 top-6'>
+        <input ref={ref} className={'py-1 border-black rounded-lg transition-[width] ' + style}></input>
       </form>
     </>
   )
