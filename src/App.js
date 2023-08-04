@@ -196,7 +196,7 @@ function Accordion() {
           <div className='font-bold text-xl md:text-2xl'>Cách sử dụng</div>
           <div className='h-[2.5px] flex-1 mx-4  bg-sky-400'></div>
         </div>
-        <div className={"px-2 transition-[height] overflow-hidden mx-2 "}>
+        <div className="px-2 mx-2">
           <p className='pt-4'>• Liều dùng: 1 gói 1 ngày.</p>
           <p>• Nên uống buổi sáng sau hoặc trước khi ăn 30 phút đến 1 tiếng.</p>
           <p>• Nên sử dụng theo liệu trình tối thiểu 3 đến 5 tháng để đạt hiệu quả tối đa.</p>
