@@ -3,10 +3,10 @@ import {IoAccessibilitySharp} from 'react-icons/io5'
 import {GiBodyHeight, GiNightSleep, GiBrain} from 'react-icons/gi'
 import {FaBacteria} from 'react-icons/fa'
 import {BsFillLungsFill, BsFacebook, BsInstagram, BsTwitter, BsPinterest} from 'react-icons/bs'
-import {FaShieldHalved, FaAngleDown} from 'react-icons/fa6'
+import {FaShieldHalved} from 'react-icons/fa6'
 import {AiOutlineMail, AiOutlineShoppingCart, AiOutlineSearch} from 'react-icons/ai'
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper/modules';
+//import { Swiper, SwiperSlide } from 'swiper/react';
+//import { Pagination } from 'swiper/modules';
 import Hamburger from 'hamburger-react'
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -24,7 +24,11 @@ function App() {
             <img alt="" src="gfmt.png"></img>
           </div>
           <div className='justify-center hidden md:flex mx-6'>
-              {["Về chúng tôi", "Xuất khẩu", "Liên hệ"].map(i => <><p className='text-center'>{i}</p><div className='mx-2 md:mx-4'></div></>)}
+              {["Về chúng tôi", "Xuất khẩu", "Liên hệ"].map(i => 
+              <div key={i} className='flex'>
+                <p className='text-center'>{i}</p>
+                <div className='mx-2 md:mx-4'></div>
+              </div>)}
           </div>
           <div className='flex items-center'>       
             <SearchButton/>
@@ -41,7 +45,7 @@ function App() {
                 Mua ngay<span className='ml-2'><AiOutlineShoppingCart/></span>         
             </button>
           </div>
-          <div className='md:w-1/2 mx-auto mt-12 md:mt-0 bg-black'><img src="znfnf.png"></img></div>
+          <div className='md:w-1/2 mx-auto mt-12 md:mt-0 bg-black'><img alt="" src="znfnf.png"></img></div>
         </div>
       </div>
       <Wid/>
@@ -52,7 +56,7 @@ function App() {
         <div className='w-full md:w-1/2 md:order-2 order-1 '>
           <div className='flex'>
             {["gói/hộp", "gram/gói"].map(i =>
-              <div className='pt-4 w-1/2'>
+              <div className='pt-4 w-1/2' key={i}>
                 <div className='border-l-2 pl-4 border-l-sky-400 text-sky-400 text-3xl font-bold w-1/2 mx-auto'>30</div>
                 <div className='mt-3 w-1/2 mx-auto text-lg'>{i}</div>
               </div>
@@ -120,7 +124,7 @@ function WidCol(props) {
   return (
     <div className='md:w-1/3 text-center'>    
               {props.data.map(i => 
-                  <div className='my-6 md:my-16 md:h-44'>
+                  <div className='my-6 md:my-16 md:h-44' key={i.text}>
                           <div className='border-2 text-sky-400 border-sky-400 rounded-full w-16 aspect-square flex justify-center items-center text-4xl mx-auto'>{i.logo}</div>
                           <div className='md:w-3/4 mx-auto mt-4'>{i.text}</div>
                   </div>
@@ -159,7 +163,11 @@ function HamburgerComponent() {
       <div className="z-10 relative"><Hamburger toggled={isOpen} toggle={setOpen} size={20}/></div>
       <div className={'fixed top-0 bottom-0 left-0 right-0 bg-[#cde4ea] flex justify-center items-center ' + status}>
         <div>
-        {["Về chúng tôi", "Xuất khẩu", "Liên hệ"].map(i => <><p>{i}</p><div className='my-6'></div></>)}
+            {["Về chúng tôi", "Xuất khẩu", "Liên hệ"].map(i => 
+                <div key={i}>
+                    <p>{i}</p>
+                    <div className='my-6'></div>
+                </div>)}
         </div>
       </div>
     </>
@@ -176,7 +184,7 @@ function NotableBenefits() {
   return (
     <div className='mt-16'>
           {texts.map(i =>
-            <div className={'py-8 md:flex justify-around items-center h-full bg-[#c8ddfa] border-b border-b-black '}>
+            <div key={i.id} className={'py-8 md:flex justify-around items-center h-full bg-[#c8ddfa] border-b border-b-black '}>
               <div className={i.id % 2 === 0 ? 'mx-auto md:mx-0 py-8 h-1/2 md:h-4/5 w-1/2 md:w-1/3 flex items-center justify-center' :
                'mx-auto md:mx-0 py-8 h-1/2 md:h-4/5 order-2 w-1/2 md:w-1/3 flex items-center justify-center'}>
                 <img alt="" src={i.img}></img>
@@ -240,12 +248,12 @@ function IngredientTab() {
             </div>
             <div className='h-[500px] overflow-y-scroll'>
             {ingredients.map(i =>
-              <>
+              <div key={i.ingredient}>
                 <div className='flex justify-between border-b py-4 px-4'>
                       <p>{i.ingredient}</p>
                       <p>{i.amount}</p>
                 </div>
-              </>
+              </div>
             )}
             </div>
           </div>
