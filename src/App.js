@@ -54,7 +54,7 @@ function App() {
             {["gói/hộp", "gram/gói"].map(i =>
               <div className='pt-4 w-1/2'>
                 <div className='border-l-2 pl-4 border-l-sky-400 text-sky-400 text-3xl font-bold w-1/2 mx-auto'>30</div>
-                <div className='mt-3 w-1/2 mx-auto text-lg'>gói/hộp</div>
+                <div className='mt-3 w-1/2 mx-auto text-lg'>{i}</div>
               </div>
             )}
           </div>
