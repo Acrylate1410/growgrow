@@ -19,14 +19,14 @@ function App() {
   return (
     <div className="App w-full overflow-hidden mx-0 relative">
       <header className='header p-4 bg-[#cde4ea] flex items-center justify-between fixed top-0 right-0 left-0 z-10'>
-          <div className='flex h-12'>
+          <div className='flex h-12 cursor-pointer'>
               <img alt="" src="logo.png"></img>
               <img alt="" src="gfmt.png"></img>
           </div>
           <nav className='hidden md:flex'>
               {["Về chúng tôi", "Xuất khẩu", "Liên hệ"].map(i => 
                   <div key={i} className='flex'>
-                    <p className='text-center'>{i}</p>
+                    <div className='text-center cursor-pointer'>{i}</div>
                     <div className='mx-2 md:mx-4'></div>
                   </div>
               )}
