@@ -8,8 +8,8 @@ import {AiOutlineMail, AiOutlineShoppingCart, AiOutlineSearch} from 'react-icons
 //import { Swiper, SwiperSlide } from 'swiper/react';
 //import { Pagination } from 'swiper/modules';
 import Hamburger from 'hamburger-react'
-import 'swiper/css';
-import 'swiper/css/pagination';
+//import 'swiper/css';
+//import 'swiper/css/pagination';
 import './App.css';
 import { useRef, useState } from 'react';
 import { useEffect } from 'react'
@@ -28,7 +28,8 @@ function App() {
                   <div key={i} className='flex'>
                     <p className='text-center'>{i}</p>
                     <div className='mx-2 md:mx-4'></div>
-              </div>)}
+                  </div>
+              )}
           </div>
           <div className='flex items-center'>       
               <SearchButton/>
@@ -55,12 +56,12 @@ function App() {
         <img alt=""  src="gh.png" className='w-2/3 md:w-2/5 order-2 md:order-1 mt-8 md:mt-0'></img>
         <div className='w-full md:w-1/2 md:order-2 order-1 '>
           <div className='flex'>
-            {["gói/hộp", "gram/gói"].map(i =>
-              <div className='pt-4 w-1/2' key={i}>
-                <div className='border-l-2 pl-4 border-l-sky-400 text-sky-400 text-3xl font-bold w-1/2 mx-auto'>30</div>
-                <div className='mt-3 w-1/2 mx-auto text-lg'>{i}</div>
-              </div>
-            )}
+              {["gói/hộp", "gram/gói"].map(i =>
+                <div className='pt-4 w-1/2' key={i}>
+                  <div className='border-l-2 pl-4 border-l-sky-400 text-sky-400 text-3xl font-bold w-1/2 mx-auto'>30</div>
+                  <div className='mt-3 w-1/2 mx-auto text-lg'>{i}</div>
+                </div>
+              )}
           </div>
         </div>
       </div> 
@@ -74,16 +75,14 @@ function App() {
           </div>
           <div className='my-6 md:my-0 md:mx-6'>
               <p>KẾT NỐI CHÚNG TÔI QUA</p>
-              <div className='flex justify-center md:justify-around mt-2'>
+              <div className='flex justify-center mt-2'>
                   <BsFacebook className='cursor-pointer '/>
-                  <div className='mx-1 md:mx-0'></div>
+                  <div className='mx-2'></div>
                   <BsInstagram className='cursor-pointer '/>
-                  <div className='mx-1 md:mx-0'></div>
+                  <div className='mx-2'></div>
                   <BsTwitter className='cursor-pointer '/>
-                  <div className='mx-1 md:mx-0'></div>
+                  <div className='mx-2'></div>
                   <AiOutlineMail className='cursor-pointer '/>
-                  <div className='mx-1 md:mx-0'></div>
-                  <BsPinterest className='cursor-pointer '/>
               </div>
           </div>
           <div>
@@ -122,12 +121,12 @@ function Wid() {
 function WidCol(props) {
   return (
     <div className='md:w-1/3 text-center'>    
-              {props.data.map(i => 
-                  <div className='my-6 md:my-16 md:h-44' key={i.text}>
-                          <div className='border-2 text-sky-400 border-sky-400 rounded-full w-16 aspect-square flex justify-center items-center text-4xl mx-auto'>{i.logo}</div>
-                          <div className='md:w-3/4 mx-auto mt-4'>{i.text}</div>
-                  </div>
-              )}  
+        {props.data.map(i => 
+            <div className='my-6 md:my-16 md:h-44' key={i.text}>
+                <div className='border-2 text-sky-400 border-sky-400 rounded-full w-16 aspect-square flex justify-center items-center text-4xl mx-auto'>{i.logo}</div>
+                <div className='md:w-3/4 mx-auto mt-4'>{i.text}</div>
+            </div>
+        )}  
     </div>
   )
 }
@@ -166,7 +165,8 @@ function HamburgerComponent() {
                 <div key={i}>
                     <p>{i}</p>
                     <div className='my-6'></div>
-                </div>)}
+                </div>
+            )}
         </div>
       </div>
     </>
@@ -183,24 +183,25 @@ function NotableBenefits() {
   return (
     <div className='mt-16'>
           {texts.map(i =>
-            <div key={i.id} className={i.id % 2 === 0 ? 'py-8 md:flex justify-around items-center h-full bg-[#c8ddfa]' : 
-            'py-8 md:flex justify-around items-center h-full bg-blue-300'}>
-              <div className={i.id % 2 === 0 ? 'mx-auto md:mx-0 py-8 h-1/2 md:h-4/5 w-1/2 md:w-1/3 flex items-center justify-center' :
-               'mx-auto md:mx-0 py-8 h-1/2 md:h-4/5 order-2 w-1/2 md:w-1/3 flex items-center justify-center'}>
-                <img alt="" src={i.img}></img>
-              </div>
-              <div className='md:w-1/3 '>
-                <div className='font-bold text-3xl md:text-4xl mb-8 text-center md:text-start'>Grow Grow có gì nổi bật?</div>
-                <div className='text-center md:text-justify mx-2 md:mx-0'>{i.text}</div>
-              </div>
-            </div>)}
+            <div key={i.id} className={i.id % 2 === 0 ? 'py-8 md:flex justify-around items-center h-full bg-blue-300' : 
+              'py-8 md:flex justify-around items-center h-full bg-[#c8ddfa]'}>
+                  <div className={i.id % 2 === 0 ? 'mx-auto md:mx-0 py-8 h-1/2 md:h-4/5 w-1/2 md:w-1/3 flex items-center justify-center' :
+                  'mx-auto md:mx-0 py-8 h-1/2 md:h-4/5 order-2 w-1/2 md:w-1/3 flex items-center justify-center'}>
+                    <img alt="" src={i.img}></img>
+                  </div>
+                  <div className='md:w-1/3 '>
+                    <div className='font-bold text-3xl md:text-4xl mb-8 text-center md:text-start'>Grow Grow có gì nổi bật?</div>
+                    <div className='text-center md:text-justify mx-2 md:mx-0'>{i.text}</div>
+                  </div>
+            </div>
+          )}
     </div>
   )
 }
 function Accordion() {
   return (
       <div className='md:w-3/5 mx-auto my-12'>
-        <div className='flex justify-between items-center mx-4 mt-8  text-sky-400' >
+        <div className='flex justify-between items-center ml-4 mt-8  text-sky-400' >
           <div className='font-bold text-xl md:text-2xl'>Cách sử dụng</div>
           <div className='h-[2.5px] flex-1 mx-4  bg-sky-400'></div>
         </div>
@@ -243,7 +244,7 @@ function IngredientTab() {
           <div id="ingredients" className='md:w-3/5 md:mx-auto mx-2'>
             <div className='flex justify-between font-bold px-4 py-4 text-white rounded-t-xl bg-sky-400 items-center'>
                 <p>Thành phần </p>
-                <p>Hàm lượng (mg/gói)</p>
+                <p className='text-end'>Hàm lượng (mg/gói)</p>
             </div>
             <div className='h-[500px] overflow-y-scroll'>
                 {ingredients.map(i =>
