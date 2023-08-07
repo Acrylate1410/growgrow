@@ -41,8 +41,8 @@ function App() {
         <div className="bg-[url(/public/A.png)] bg-[length:100%_100%] h-[600px] flex justify-center px-12 mt-20">
           <div className='my-24'>  
             <div className='mx-auto'>
-              <h1 className='font-bold text-3xl md:text-4xl text-center'>Grow Grow</h1>
-              <div className='text-xl mt-5 text-center'>Siro phát triển chiều cao và sức khỏe toàn diện cho trẻ đến từ Nhật Bản</div>
+              <h2 className='font-bold text-3xl md:text-4xl text-center'>Grow Grow</h2>
+              <p className='text-xl mt-5 text-center'>Siro phát triển chiều cao và sức khỏe toàn diện cho trẻ đến từ Nhật Bản</p>
               <button className='mx-auto bg-black text-white w-36 h-12 mt-5 rounded-full flex items-center justify-center border border-black hover:bg-white hover:text-black transition '>
                   Mua ngay<span className='ml-2'><AiOutlineShoppingCart/></span>         
               </button>
@@ -53,7 +53,7 @@ function App() {
         <section><Wid/></section>
         <section><NotableBenefits/></section>
         <section>
-          <h1 className='font-bold text-4xl mx-auto text-center mb-8 text-sky-400 mt-20'>Quy cách đóng gói</h1>
+          <h2 className='font-bold text-4xl mx-auto text-center mb-8 text-sky-400 mt-20'>Quy cách đóng gói</h2>
           <div className='flex md:flex-row flex-col items-center md:justify-between py-4 px-2 md:px-20'>
             <img alt=""  src="gh.png" className='w-2/3 md:w-2/5 order-2 md:order-1 mt-8 md:mt-0'></img>
             <div className='w-full md:w-1/2 md:order-2 order-1 '>
@@ -111,7 +111,7 @@ function Wid() {
                   {logo: <GiNightSleep/>, text: "Giúp trẻ ăn và ngủ ngon hơn"}]
   return (
     <>
-      <h1 className='text-center font-bold text-3xl md:text-4xl z-10 mt-20 text-sky-400'>Grow Grow</h1>
+      <h2 className='text-center font-bold text-3xl md:text-4xl z-10 mt-20 text-sky-400'>Grow Grow</h2>
       <p className='text-lg text-center mt-4 md:mb-0 mb-20'>Giúp mẹ chăm con nhàn rỗi và mang đến sức khỏe toàn diện cho con</p>
       <div className='md:flex justify-around items-center mx-4 md:mx-12'>
           <WidCol data={data1}/>
@@ -127,8 +127,8 @@ function WidCol(props) {
     <div className='md:w-1/3 text-center'>    
         {props.data.map(i => 
             <div className='my-6 md:my-16 md:h-44' key={i.text}>
-                <div className='border-2 text-sky-400 border-sky-400 rounded-full w-16 aspect-square flex justify-center items-center text-4xl mx-auto'>{i.logo}</div>
-                <div className='md:w-3/4 mx-auto mt-4'>{i.text}</div>
+                <p className='border-2 text-sky-400 border-sky-400 rounded-full w-16 aspect-square flex justify-center items-center text-4xl mx-auto'>{i.logo}</p>
+                <p className='md:w-3/4 mx-auto mt-4'>{i.text}</p>
             </div>
         )}  
     </div>
@@ -167,7 +167,7 @@ function HamburgerComponent() {
         <div>
             {["Về chúng tôi", "Xuất khẩu", "Liên hệ"].map(i => 
                 <div key={i}>
-                    <div className='cursor-pointer'>{i}</div>
+                    <p className='cursor-pointer'>{i}</p>
                     <div className='my-6'></div>
                 </div>
             )}
@@ -187,15 +187,15 @@ function NotableBenefits() {
   return (
     <div className='mt-16'>
           {texts.map(i =>
-            <div key={i.id} className={i.id % 2 === 0 ? 'py-8 md:flex justify-around items-center h-full bg-blue-300' : 
-              'py-8 md:flex justify-around items-center h-full bg-[#c8ddfa]'}>
-                  <div className={i.id % 2 === 0 ? 'mx-auto md:mx-0 py-8 h-1/2 md:h-4/5 w-1/2 md:w-1/3 flex items-center justify-center' :
-                  'mx-auto md:mx-0 py-8 h-1/2 md:h-4/5 order-2 w-1/2 md:w-1/3 flex items-center justify-center'}>
+            <div key={i.id} className={i.id % 2 === 0 ? 'py-8 md:flex justify-around items-center h-full bg-blue-300' 
+                                                      : 'py-8 md:flex justify-around items-center h-full bg-[#c8ddfa]'}>
+                  <div className={i.id % 2 === 0 ?  'mx-auto md:mx-0 py-8 h-1/2 md:h-4/5 w-1/2 md:w-1/3 flex items-center justify-center'
+                                                 :  'mx-auto md:mx-0 py-8 h-1/2 md:h-4/5 w-1/2 md:w-1/3 flex items-center justify-center order-2'}>
                     <img alt="" src={i.img}></img>
                   </div>
                   <div className='md:w-1/3 '>
-                    <h1 className='font-bold text-3xl md:text-4xl mb-8 text-center md:text-start'>Grow Grow có gì nổi bật?</h1>
-                    <div className='text-center md:text-justify mx-2 md:mx-0'>{i.text}</div>
+                    <h2 className='font-bold text-3xl md:text-4xl mb-8 text-center md:text-start'>Grow Grow có gì nổi bật?</h2>
+                    <p className='text-center md:text-justify mx-2 md:mx-0'>{i.text}</p>
                   </div>
             </div>
           )}
@@ -206,7 +206,7 @@ function Accordion() {
   return (
       <div className='md:w-3/5 mx-auto my-12'>
         <div className='flex justify-between items-center ml-4 mt-8  text-sky-400' >
-          <div className='font-bold text-xl md:text-2xl'>Cách sử dụng</div>
+          <p className='font-bold text-xl md:text-2xl'>Cách sử dụng</p>
           <div className='h-[2.5px] flex-1 mx-4  bg-sky-400'></div>
         </div>
         <div className="px-2 mx-2">
@@ -244,7 +244,7 @@ function IngredientTab() {
   ]
       return (
         <>
-          <h1 className='text-center font-bold text-3xl md:text-4xl  mb-12 z-10 mt-20 text-sky-400'>Thành phần dinh dưỡng</h1>
+          <h2 className='text-center font-bold text-3xl md:text-4xl  mb-12 z-10 mt-20 text-sky-400'>Thành phần dinh dưỡng</h2>
           <div id="ingredients" className='md:w-3/5 md:mx-auto mx-2'>
             <div className='flex justify-between font-bold px-4 py-5 text-white rounded-t-xl bg-sky-400 items-center'>
                 <p>Thành phần </p>
