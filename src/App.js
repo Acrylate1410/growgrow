@@ -111,7 +111,7 @@ function Wid() {
                   {logo: <GiNightSleep/>, text: "Giúp trẻ ăn và ngủ ngon hơn"}]
   return (
     <>
-      <p className='text-center font-bold text-3xl md:text-4xl z-10 mt-20 text-sky-400'>Grow Grow</p>
+      <h1 className='text-center font-bold text-3xl md:text-4xl z-10 mt-20 text-sky-400'>Grow Grow</h1>
       <p className='text-lg text-center mt-4 md:mb-0 mb-20'>Giúp mẹ chăm con nhàn rỗi và mang đến sức khỏe toàn diện cho con</p>
       <div className='md:flex justify-around items-center mx-4 md:mx-12'>
           <WidCol data={data1}/>
