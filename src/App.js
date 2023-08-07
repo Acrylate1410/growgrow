@@ -41,7 +41,7 @@ function App() {
         <div className="bg-[url(/public/A.png)] bg-[length:100%_100%] h-[600px] flex justify-center px-12 mt-20">
           <div className='my-24'>  
             <div className='mx-auto'>
-              <h2 className='font-bold text-3xl md:text-4xl text-center'>Grow Grow</h2>
+              <h1 className='font-bold text-3xl md:text-4xl text-center'>Grow Grow</h1>
               <p className='text-xl mt-5 text-center'>Siro phát triển chiều cao và sức khỏe toàn diện cho trẻ đến từ Nhật Bản</p>
               <button className='mx-auto bg-black text-white w-36 h-12 mt-5 rounded-full flex items-center justify-center border border-black hover:bg-white hover:text-black transition '>
                   Mua ngay<span className='ml-2'><AiOutlineShoppingCart/></span>         
