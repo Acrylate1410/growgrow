@@ -23,7 +23,7 @@ function App() {
               <img alt="" src="logo.png"></img>
               <img alt="" src="gfmt.png"></img>
           </div>
-          <nav className='justify-center hidden md:flex mx-6'>
+          <nav className='hidden md:flex'>
               {["Về chúng tôi", "Xuất khẩu", "Liên hệ"].map(i => 
                   <div key={i} className='flex'>
                     <p className='text-center'>{i}</p>
