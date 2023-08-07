@@ -167,7 +167,7 @@ function HamburgerComponent() {
         <div>
             {["Về chúng tôi", "Xuất khẩu", "Liên hệ"].map(i => 
                 <div key={i}>
-                    <p>{i}</p>
+                    <div className='cursor-pointer'>{i}</div>
                     <div className='my-6'></div>
                 </div>
             )}
