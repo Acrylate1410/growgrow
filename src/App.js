@@ -249,7 +249,7 @@ function IngredientTab() {
             <div className='h-[500px] overflow-y-scroll'>
                 {ingredients.map(i =>
 
-                  <div key={i.id} className={'flex justify-between py-4 px-4'}>
+                  <div key={i.id} className={'flex justify-between py-4 px-4 border-b'}>
                         <p>{i.ingredient}</p>
                         <p>{i.amount}</p>
                   </div>
