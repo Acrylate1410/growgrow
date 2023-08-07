@@ -216,44 +216,45 @@ function Accordion() {
 }
 
 function IngredientTab() {
-  const ingredients = [{ingredient: "Canxi lactate", amount: "30"},
-        {ingredient: "Vitamin D3 (0,25%)", amount: "2"},
-        {ingredient: "Peptide lòng đỏ trứng", amount: "10"},
-        {ingredient: "Men chứa kẽm (10%)", amount: "20"},
-        {ingredient: "Magiê sunfat", amount: "80"},
-        {ingredient: "Axit folic", amount: "0,2"},
-        {ingredient: "Dầu cá tinh luyện (DHA/EPA)", amount: "46,7515"},
-        {ingredient: "L-ornithine hydrochloride", amount: "10"},
-        {ingredient: "Protein", amount: "250"},
-        {ingredient: "Mật ong tinh khiết", amount: "4500"},
-        {ingredient: "Keo ong", amount: "30"},
-        {ingredient: "Chiết xuất Phosphatidylserin (10:1)", amount: "5"},
-        {ingredient: "Vi khuẩn axit lactic", amount: "4,5"},
-        {ingredient: "Oligosaccharide", amount: "6300"},
-        {ingredient: "Vitamin A (10%)", amount: "12"},
-        {ingredient: "Vitamin C", amount: "10"},
-        {ingredient: "Vitamin E", amount: "2"},
-        {ingredient: "Vitamin B1", amount: "2"},
-        {ingredient: "Vitamin B2", amount: "2"},
-        {ingredient: "Vitamin B6", amount: "2"},
-        {ingredient: "Vitamin B12 (0,1%)", amount: "2"},
+  const ingredients = [{id: 1, ingredient: "Canxi lactate", amount: "30"},
+        {id: 2, ingredient: "Vitamin D3 (0,25%)", amount: "2"},
+        {id: 3, ingredient: "Peptide lòng đỏ trứng", amount: "10"},
+        {id: 4, ingredient: "Men chứa kẽm (10%)", amount: "20"},
+        {id: 5, ingredient: "Magiê sunfat", amount: "80"},
+        {id: 6, ingredient: "Axit folic", amount: "0,2"},
+        {id: 7, ingredient: "Dầu cá tinh luyện (DHA/EPA)", amount: "46,7515"},
+        {id: 8, ingredient: "L-ornithine hydrochloride", amount: "10"},
+        {id: 9, ingredient: "Protein", amount: "250"},
+        {id: 10, ingredient: "Mật ong tinh khiết", amount: "4500"},
+        {id: 11, ingredient: "Keo ong", amount: "30"},
+        {id: 12, ingredient: "Chiết xuất Phosphatidylserin (10:1)", amount: "5"},
+        {id: 13, ingredient: "Vi khuẩn axit lactic", amount: "4,5"},
+        {id: 14, ingredient: "Oligosaccharide", amount: "6300"},
+        {id: 15, ingredient: "Vitamin A (10%)", amount: "12"},
+        {id: 16, ingredient: "Vitamin C", amount: "10"},
+        {id: 17, ingredient: "Vitamin E", amount: "2"},
+        {id: 18, ingredient: "Vitamin B1", amount: "2"},
+        {id: 19, ingredient: "Vitamin B2", amount: "2"},
+        {id: 20, ingredient: "Vitamin B6", amount: "2"},
+        {id: 21, ingredient: "Vitamin B12 (0,1%)", amount: "2"},
   ]
       return (
         <>
           <p className='text-center font-bold text-3xl md:text-4xl  mb-12 z-10 mt-20 text-sky-400'>Thành phần dinh dưỡng</p>
           <div id="ingredients" className='md:w-3/5 md:mx-auto mx-2'>
-            <div className='flex justify-between font-bold px-4 py-4 text-white rounded-t-xl bg-sky-400 items-center'>
+            <div className='flex justify-between font-bold px-4 py-5 text-white rounded-t-xl bg-sky-400 items-center'>
                 <p>Thành phần </p>
                 <p className='text-end'>Hàm lượng (mg/gói)</p>
             </div>
             <div className='h-[500px] overflow-y-scroll'>
                 {ingredients.map(i =>
-                  <div key={i.ingredient}>
-                    <div className='flex justify-between border-b py-4 px-4'>
-                          <p>{i.ingredient}</p>
-                          <p>{i.amount}</p>
-                    </div>
+
+                  <div key={i.id} className={i.id % 2 === 0 ? 'flex justify-between py-4 px-4 bg-gray-200': 
+                                                              'flex justify-between py-4 px-4' }>
+                        <p>{i.ingredient}</p>
+                        <p>{i.amount}</p>
                   </div>
+
                 )}
             </div>
           </div>
