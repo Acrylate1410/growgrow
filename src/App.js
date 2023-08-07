@@ -23,50 +23,54 @@ function App() {
               <img alt="" src="logo.png"></img>
               <img alt="" src="gfmt.png"></img>
           </div>
-          <div className='justify-center hidden md:flex mx-6'>
+          <nav className='justify-center hidden md:flex mx-6'>
               {["Về chúng tôi", "Xuất khẩu", "Liên hệ"].map(i => 
                   <div key={i} className='flex'>
                     <p className='text-center'>{i}</p>
                     <div className='mx-2 md:mx-4'></div>
                   </div>
               )}
-          </div>
+          </nav>
           <div className='flex items-center'>       
               <SearchButton/>
               <div className='mx-1.5'></div>
               <HamburgerComponent/>
           </div>
       </header>
-      <div className="bg-[url(/public/A.png)] bg-[length:100%_100%] h-[600px] flex justify-center px-12 mt-20">
-        <div className='my-24'>  
-          <div className='mx-auto'>
-            <div className='font-bold text-3xl md:text-4xl text-center'>Grow Grow</div>
-            <div className='text-xl mt-5 text-center'>Siro phát triển chiều cao và sức khỏe toàn diện cho trẻ đến từ Nhật Bản</div>
-            <button className='mx-auto bg-black text-white w-36 h-12 mt-5 rounded-full flex items-center justify-center border border-black hover:bg-white hover:text-black transition '>
-                Mua ngay<span className='ml-2'><AiOutlineShoppingCart/></span>         
-            </button>
-          </div>
-          <div className='md:w-1/2 mx-auto mt-12 md:mt-0 bg-black'><img alt="" src="znfnf.png"></img></div>
-        </div>
-      </div>
-      <Wid/>
-      <NotableBenefits/>
-      <div className='font-bold text-4xl mx-auto text-center mb-8 text-sky-400 mt-20'>Quy cách đóng gói</div>
-      <div className='flex md:flex-row flex-col items-center md:justify-between py-4 px-2 md:px-20'>
-        <img alt=""  src="gh.png" className='w-2/3 md:w-2/5 order-2 md:order-1 mt-8 md:mt-0'></img>
-        <div className='w-full md:w-1/2 md:order-2 order-1 '>
-          <div className='flex'>
-              {["gói/hộp", "gram/gói"].map(i =>
-                <div className='pt-4 w-1/2' key={i}>
-                  <div className='border-l-2 pl-4 border-l-sky-400 text-sky-400 text-3xl font-bold w-1/2 mx-auto'>30</div>
-                  <div className='mt-3 w-1/2 mx-auto text-lg'>{i}</div>
-                </div>
-              )}
+      <main>
+        <div className="bg-[url(/public/A.png)] bg-[length:100%_100%] h-[600px] flex justify-center px-12 mt-20">
+          <div className='my-24'>  
+            <div className='mx-auto'>
+              <h1 className='font-bold text-3xl md:text-4xl text-center'>Grow Grow</h1>
+              <div className='text-xl mt-5 text-center'>Siro phát triển chiều cao và sức khỏe toàn diện cho trẻ đến từ Nhật Bản</div>
+              <button className='mx-auto bg-black text-white w-36 h-12 mt-5 rounded-full flex items-center justify-center border border-black hover:bg-white hover:text-black transition '>
+                  Mua ngay<span className='ml-2'><AiOutlineShoppingCart/></span>         
+              </button>
+            </div>
+            <div className='md:w-1/2 mx-auto mt-12 md:mt-0 bg-black'><img alt="" src="znfnf.png"></img></div>
           </div>
         </div>
-      </div> 
-      <IngredientTab/>
-      <Accordion/>
+        <section><Wid/></section>
+        <section><NotableBenefits/></section>
+        <section>
+          <h1 className='font-bold text-4xl mx-auto text-center mb-8 text-sky-400 mt-20'>Quy cách đóng gói</h1>
+          <div className='flex md:flex-row flex-col items-center md:justify-between py-4 px-2 md:px-20'>
+            <img alt=""  src="gh.png" className='w-2/3 md:w-2/5 order-2 md:order-1 mt-8 md:mt-0'></img>
+            <div className='w-full md:w-1/2 md:order-2 order-1 '>
+              <div className='flex'>
+                  {["gói/hộp", "gram/gói"].map(i =>
+                    <div className='pt-4 w-1/2' key={i}>
+                      <div className='border-l-2 pl-4 border-l-sky-400 text-sky-400 text-3xl font-bold w-1/2 mx-auto'>30</div>
+                      <div className='mt-3 w-1/2 mx-auto text-lg'>{i}</div>
+                    </div>
+                  )}
+              </div>
+            </div>
+          </div> 
+        </section>
+        <section><IngredientTab/></section>
+        <section><Accordion/></section>
+      </main>
       <footer className='bg-black md:flex justify-around text-white py-6 text-center md:text-start'>
           <div>
               <p>Nhà phân phối: TRƯƠNG THANH TÚ – MẸ VÀ BÉ</p>
@@ -190,7 +194,7 @@ function NotableBenefits() {
                     <img alt="" src={i.img}></img>
                   </div>
                   <div className='md:w-1/3 '>
-                    <div className='font-bold text-3xl md:text-4xl mb-8 text-center md:text-start'>Grow Grow có gì nổi bật?</div>
+                    <h1 className='font-bold text-3xl md:text-4xl mb-8 text-center md:text-start'>Grow Grow có gì nổi bật?</h1>
                     <div className='text-center md:text-justify mx-2 md:mx-0'>{i.text}</div>
                   </div>
             </div>
@@ -240,7 +244,7 @@ function IngredientTab() {
   ]
       return (
         <>
-          <p className='text-center font-bold text-3xl md:text-4xl  mb-12 z-10 mt-20 text-sky-400'>Thành phần dinh dưỡng</p>
+          <h1 className='text-center font-bold text-3xl md:text-4xl  mb-12 z-10 mt-20 text-sky-400'>Thành phần dinh dưỡng</h1>
           <div id="ingredients" className='md:w-3/5 md:mx-auto mx-2'>
             <div className='flex justify-between font-bold px-4 py-5 text-white rounded-t-xl bg-sky-400 items-center'>
                 <p>Thành phần </p>
