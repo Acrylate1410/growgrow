@@ -24,7 +24,7 @@ function App() {
               <img alt="" src="gfmt.png"></img>
           </div>
           <nav className='hidden md:flex'>
-              {["Về chúng tôi", "Xuất khẩu", "Liên hệ"].map(i => 
+              {["Về chúng tôi", "Liên hệ"].map(i => 
                   <div key={i} className='flex'>
                     <div className='text-center cursor-pointer'>{i}</div>
                     <div className='mx-2 md:mx-4'></div>
@@ -165,7 +165,7 @@ function HamburgerComponent() {
       <div className="z-10 relative"><Hamburger toggled={isOpen} toggle={setOpen} size={20}/></div>
       <div className={'fixed top-0 bottom-0 left-0 right-0 bg-[#cde4ea] flex justify-center items-center ' + status}>
         <div>
-            {["Về chúng tôi", "Xuất khẩu", "Liên hệ"].map(i => 
+            {["Về chúng tôi", "Liên hệ"].map(i => 
                 <div key={i}>
                     <p className='cursor-pointer'>{i}</p>
                     <div className='my-6'></div>
